@@ -1,9 +1,3 @@
-# Express-Boiler-Plate
+# User API
 
-Boiler-plate node.js with
-
-- express
-- nodemon
-- dotenv
-- routing
-- mongoose
+node with express and mongodb
