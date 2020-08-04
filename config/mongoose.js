@@ -10,7 +10,6 @@ exports.connectMongoDB = async () => {
 		});
 		console.log('MongoDB connected');
 	} catch (error) {
-		console.log('MongoDB has NOT connected');
-		handleError(error);
+		console.log('MongoDB has NOT connected...', error);
 	}
 };

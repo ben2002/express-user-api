@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+
 const { connectMongoDB } = require('./config/mongoose');
+
+//no try/catch blocks in route-handling
+require('express-async-errors');
 
 //use .env file
 require('dotenv').config();
