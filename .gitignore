@@ -1,6 +1,9 @@
 # Environment variables
 /.env
 
+# apidocs
+/docs
+
 # Dependency directories
 /node_modules
 

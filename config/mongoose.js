@@ -8,7 +8,7 @@ exports.connectMongoDB = async () => {
 			useUnifiedTopology: true,
 			useFindAndModify: false
 		});
-		console.log('MongoDB connected');
+		console.log('MongoDB has connected');
 	} catch (error) {
 		console.log('MongoDB has NOT connected...', error);
 	}

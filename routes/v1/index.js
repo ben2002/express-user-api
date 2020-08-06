@@ -12,7 +12,7 @@ router.use('/api/user', userRoutes);
 router.use('/api/auth', authRoutes);
 router.use('/dashboard', homeRoutes);
 
-// Error handling
+// Error handling in the request process pipeline
 router.use(error);
 
 module.exports = router;

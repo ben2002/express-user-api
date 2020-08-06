@@ -3,22 +3,29 @@ const bodyParser = require('body-parser');
 
 const { connectMongoDB } = require('./config/mongoose');
 
-//no try/catch blocks in route-handling
+// Error handling inside express
+// No try/catch blocks in route-handling
 require('express-async-errors');
 
-//use .env file
+// Use environment variables
 require('dotenv').config();
-//initialize express
+
+// Initialize express
 const app = express();
 
-//set up database
+// Error handling outside express
+process.on('uncaughtException', (err) => {
+	console.log(err);
+});
+
+// Set up database
 connectMongoDB();
 
-//set body parser middleware for different types
+// Set body parser middleware for different types
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//define routes in a seperate file
+// Define routes in a seperate file
 app.use(require('./routes/v1'));
 
 const PORT = process.env.PORT || 5000;
